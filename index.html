@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>Traveling Companion</title>
+</head>
+
+<body>
+    <header>
+        <h1>Time to Escape</h1>
+    </header>
+    <fieldset>
+        <form class="flight-getter">
+            <label>From</label>
+            <input name="from" type="text" placeholder="Departing Airport" required>
+            <label>To</label>
+            <input name="to" type="text" placeholder="Arrival Airport" required>
+            <label>Date</label>
+            <input name="date" type="text" placeholder="YYYY-MM-DD" required>
+            <button class="submit">Submit</button>
+            <button class="clear">Clear</button>
+        </form>
+    </fieldset>
+    <main>
+        <div class="search-container">
+            <div class="search-results">
+            </div>
+            <div class="results">
+            </div>
+        </div>
+        <div class="templates hidden">
+            <dl class="result search">
+                <dt>Airline Name:</dt>
+                <dd class="airline-name"></dd>
+                <dt>Price:</dt>
+                <dd class="price"></dd>
+                <dt>Airport Departure:</dt>
+                <dd class="origin"></dd>
+                <dt>Airport Destination:</dt>
+                <dd class="destination"></dd>
+                <dt>Departure Time:</dt>
+                <dd class="departure-time"></dd>
+                <dt>Arrival Time:</dt>
+                <dd class="arrival-time"></dd>
+                <dt>Flight Number:</dt>
+                <dd class="flight-number"></dd>
+            </dl>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

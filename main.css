@@ -1,0 +1,44 @@
+html {
+	background: url('images/old-white-background.jpg');
+	background-size: 100%;
+}
+main {
+    width: 960px;
+    height: 540px;
+    border: 3px solid black;
+    border-radius: 3px;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/Tumblr-wallpapers-hd.jpg');
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    text-align: center
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+    letter-spacing: 12px;
+}
+
+fieldset {
+    width: 700px;
+      	border: none;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search-container {
+	color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    max-height: 540px;
+    overflow-y: scroll;
+}
+
+.templates {
+    display: none;
+}
