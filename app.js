@@ -17,7 +17,7 @@ $(function() {
 var getResults = function(dept, arr, date) {
 
     // we create a variable to hold our url and our parameters so we can pass them in AJAX
-    var url = "http://terminal2.expedia.com/x/mflights/search";
+    var url = "https://terminal2.expedia.com/x/mflights/search";
     var params = {
         apikey: 'Uyg714nBLezX9YjKGkmNGDuI5kJi9xUB',
         departureAirport: dept,
