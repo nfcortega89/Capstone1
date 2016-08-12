@@ -16,16 +16,17 @@ var getPictures = function(tags) {
         type: 'GET'
     }).done(function(data) {
         var response = data;
-        console.log('data', response);
-        console.log('response.photos', response.photos)
-        console.log('response.photos.photo', response.photos.photo);
+        // console.log('data', response);
+        // console.log('response.photos', response.photos)
+        // console.log('response.photos.photo', response.photos.photo);
+        var photos = data.photos.photo;
 
-        for (var i = 0; i < data.photos.length; i++) {
-            var farmId = data.photos[i].farm;
-            console.log(farmId);
-            var serverId = data.photos[i].server;
-            var id = data.photos[i].id;
-            var secret = data.photos[i].secret;
+        // console.log(data);
+        for (var i = 0; i < 5; i++) {
+            var farmId = photos[i].farm;
+            var serverId = photos[i].server;
+            var id = photos[i].id;
+            var secret = photos[i].secret;
 
             var picture = showPictures(farmId, serverId, id, secret);
             $('.pictures').append(picture);
@@ -40,6 +41,6 @@ var showPictures = function(farmId, serverId, id, secret) {
     var results = $('.pictures').clone();
 
     var picture = results.find('.pictures img').attr('src', "http://farm" + farmId + ".staticflickr.com/" + serverId + "/" + id + "_" + secret + ".jpg");
-
+    console.log("http://farm" + farmId + ".staticflickr.com/" + serverId + "/" + id + "_" + secret + ".jpg");
     return results;
 };
