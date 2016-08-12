@@ -17,7 +17,7 @@ $(function() {
 var getResults = function(dept, arr, date) {
 
     // we create a variable to hold our url and our parameters so we can pass them in AJAX
-    var url = "terminal2.expedia.com/x/mflights/search";
+    var url = "http://terminal2.expedia.com/x/mflights/search";
     var params = {
         apikey: 'Uyg714nBLezX9YjKGkmNGDuI5kJi9xUB',
         departureAirport: dept,
@@ -91,8 +91,8 @@ var flightInfo = function(segment, offer) {
     var results = $('.templates .search').clone();
 
 
-    // we'll create variables for 'price, departureTime, arrivalTime, flightNumber, airline, airportDeparture
-    // and airportArrival' and use the find method to find the appropriate class on our template
+    // we'll create variables for 'price, departureTime, arrivalTime, flightNumber and airline
+    // and use the find method to find the appropriate class on our template
     // next we'll use the text method to replace it by using our parameters as a placeholder and accces the data
     // with its corresponding location in the nested object 
 
@@ -101,8 +101,7 @@ var flightInfo = function(segment, offer) {
     var arrivalTime = results.find('.arrival-time').text(segment.arrivalTime);
     var flightNumber = results.find('.flight-number').text(segment.airlineCode + " " + segment.flightNumber);
     var airline = results.find('.airline-name').text(segment.airlineName);
-    var airportDeparture = results.find('.origin').text(segment.departureAirportLocation);
-    var airportArrival = results.find('.destination').text(segment.arrivalAirportLocation);
+
 
     // we'll want to return the results so that this function spits out the information
     return results;
@@ -113,7 +112,7 @@ var showSearchResults = function(deptPort, arrPort, resultNum) {
 
     // we'll create a variable called results that tells the user how many flights there are leaving from
     // their origin location to their destination
-    var results = resultNum + ' flights leaving from ' + deptPort + ' to ' + arrPort;
+    var results = '<h2>' + resultNum + ' flights leaving from ' + deptPort + ' to ' + arrPort + '</h2>';
 
     // we'll want to return the results so that this function spits the data back out.
     return results;
